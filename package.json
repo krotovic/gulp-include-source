@@ -1,19 +1,23 @@
 {
-  "name": "gulp-include-source",
-  "version": "0.0.5",
+  "name": "gulp-includer",
+  "version": "0.0.6",
   "description": "Include scripts and styles into your HTML files automatically.",
   "author": {
     "name": "André Gil",
     "email": "hey@andregil.org",
     "url": "http://somepixels.net/"
   },
-  "homepage": "https://github.com/gil/gulp-include-source",
+  "contributors": {
+    "name": "Jonathan Lobaugh",
+    "email": "jobelobes@gmail.com"
+  },
+  "homepage": "https://github.com/jobelobes/gulp-include-source",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gil/gulp-include-source.git"
+    "url": "https://github.com/jobelobes/gulp-include-source.git"
   },
   "bugs": {
-    "url": "https://github.com/gil/gulp-include-source/issues"
+    "url": "https://github.com/jobelobes/gulp-include-source/issues"
   },
   "readmeFilename": "README.md",
   "main": "index.js",
