@@ -11,8 +11,14 @@ var through = require('through2'),
 var PLUGIN_NAME = 'gulp-include-source';
 
 var placeholders = {
-  'js' : '<script src="%"></script>',
-  'css' : '<link rel="stylesheet" href="%">'
+    'jade': {
+        'js': 'script(type="application/javascript" src="%")',
+        'css': 'link(rel="stylesheet" type="text/css" href="%")'
+    },
+    'html': {
+        'js' : '<script type="application/javascript" src="%"></script>',
+        'css' : '<link rel="stylesheet" type="text/css" href="%">'
+    }
 };
 
 function matchExpressions(contents) {
@@ -49,7 +55,7 @@ function injectFiles(file, options) {
   while( matches ) {
 
     var type = matches[1];
-    var placeholder = placeholders[ type ];
+    var placeholder = placeholders[ options.outputExt || 'html' ][ type ];
     var files = parseFiles(matches[2], cwd);
     var includes = '';
 
